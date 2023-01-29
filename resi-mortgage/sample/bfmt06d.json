@@ -1,4 +1,5 @@
 {
   "name": "Bayview Financial Mortgage Trust 2006-D",
-  "url": "https://raw.githubusercontent.com/liquidaty/loan-level-data/master/resi-mortgage/sample/bfmt06d.csv"
+  "url": "https://raw.githubusercontent.com/liquidaty/loan-level-data/master/resi-mortgage/sample/bfmt06d.csv",
+  "fileName": "bfmt06d.csv"
 }
