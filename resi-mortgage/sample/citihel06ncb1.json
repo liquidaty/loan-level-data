@@ -1,5 +1,7 @@
 {
   "name": "Citigroup HELOC Trust 2006-NCB1",
   "url": "https://raw.githubusercontent.com/liquidaty/loan-level-data/master/resi-mortgage/sample/citihel06ncb1.csv",
-  "fileName": "citihel06ncb1.csv"
+  "fileName": "citihel06ncb1.csv",
+  "prospectus": "https://www.sec.gov/Archives/edgar/data/1361097/000088237706001797/d508789_424b5.htm",
+  "source": "https://www.sec.gov/Archives/edgar/data/1361097/000088237706001763/d508892.htm"
 }
