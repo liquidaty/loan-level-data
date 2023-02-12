@@ -7,16 +7,16 @@
       "Cut-off Date": {
         "redefine": {
           "value": "20220105"
-        },
-        "Next Due Date": {
-          "redefine": {
-            "value": "with(coalesce([Interest Paid Through Date],[Cut-off Date]), dateadd(\"m\", datepart(\"d\",[]) < datepart(\"d\",[Cut-off Date]), dateadd(\"d\", datepart(\"d\", [])-1, datemonthstart([Cut-off Date]))))"
-          }
-        },
-        "Repline Group": {
-          "redefine": {
-            "value": "if(datepart(\"d\", coalesce([Interest Paid Through Date],[Cut-off Date]))<datepart(\"d\",[Cut-off Date]),0,7) + floor([Remaining Term to Maturity]/12) + 1"
-          }
+        }
+      },
+      "Next Due Date": {
+        "redefine": {
+          "value": "with(coalesce([Interest Paid Through Date],[Cut-off Date]), dateadd(\"m\", datepart(\"d\",[]) < datepart(\"d\",[Cut-off Date]), dateadd(\"d\", datepart(\"d\", [])-1, datemonthstart([Cut-off Date]))))"
+        }
+      },
+      "Repline Group": {
+        "redefine": {
+          "value": "if(datepart(\"d\", coalesce([Interest Paid Through Date],[Cut-off Date]))<datepart(\"d\",[Cut-off Date]),0,7) + floor([Remaining Term to Maturity]/12) + 1"
         }
       }
     }
