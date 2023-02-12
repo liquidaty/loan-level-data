@@ -1,6 +1,16 @@
 {
   "name": "World Omni Auto Receivables Trust 2022-A",
   "url": "https://raw.githubusercontent.com/liquidaty/loan-level-data/master/auto-loan/sample/woart22a.csv",
+  "mapping": {
+    "domain": "liquidaty8/auto-loan",
+    "overrides": {
+      "redefine": {
+        "Cut-off Date": 20220105,
+        "Next Due Date": "with(coalesce([Interest Paid Through Date],[Cut-off Date]), dateadd(\"m\", datepart(\"d\",[]) < datepart(\"d\",[Cut-off Date]), dateadd(\"d\", datepart(\"d\", [])-1, datemonthstart([Cut-off Date]))))",
+        "Repline Group": "if(datepart(\"d\", coalesce([Interest Paid Through Date],[Cut-off Date]))<datepart(\"d\",[Cut-off Date]),0,7) + floor([Remaining Term to Maturity]/12) + 1"
+      }
+    }
+  },
   "fileName": "woart22a.csv",
   "prospectus": "https://www.sec.gov/Archives/edgar/data/1083199/000110465922019524/tm224337d14_424b5.htm",
   "source": "https://www.sec.gov/Archives/edgar/data/1083199/000110465922010794/woart2022aex102dec21.xml"
