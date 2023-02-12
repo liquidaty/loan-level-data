@@ -1,13 +1,23 @@
 {
   "name": "World Omni Auto Receivables Trust 2022-A",
   "url": "https://raw.githubusercontent.com/liquidaty/loan-level-data/master/auto-loan/sample/woart22a.csv",
+  "domain": "liquidaty8/auto-loan",
   "mapping": {
-    "domain": "liquidaty8/auto-loan",
     "overrides": {
-      "redefine": {
-        "Cut-off Date": 20220105,
-        "Next Due Date": "with(coalesce([Interest Paid Through Date],[Cut-off Date]), dateadd(\"m\", datepart(\"d\",[]) < datepart(\"d\",[Cut-off Date]), dateadd(\"d\", datepart(\"d\", [])-1, datemonthstart([Cut-off Date]))))",
-        "Repline Group": "if(datepart(\"d\", coalesce([Interest Paid Through Date],[Cut-off Date]))<datepart(\"d\",[Cut-off Date]),0,7) + floor([Remaining Term to Maturity]/12) + 1"
+      "Cut-off Date": {
+        "redefine": {
+          "value": "20220105"
+        },
+        "Next Due Date": {
+          "redefine": {
+            "value": "with(coalesce([Interest Paid Through Date],[Cut-off Date]), dateadd(\"m\", datepart(\"d\",[]) < datepart(\"d\",[Cut-off Date]), dateadd(\"d\", datepart(\"d\", [])-1, datemonthstart([Cut-off Date]))))"
+          }
+        },
+        "Repline Group": {
+          "redefine": {
+            "value": "if(datepart(\"d\", coalesce([Interest Paid Through Date],[Cut-off Date]))<datepart(\"d\",[Cut-off Date]),0,7) + floor([Remaining Term to Maturity]/12) + 1"
+          }
+        }
       }
     }
   },
