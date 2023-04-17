@@ -1,0 +1,5 @@
+{
+  "name": "Sample data with ASF prepayment penalty codes",
+  "url": "https://raw.githubusercontent.com/liquidaty/loan-level-data/master/resi-mortgage/sample/Demo_tape_format_B_PPP.csv",
+  "fileName": "Demo_tape_format_B_PPP.csv"
+}
