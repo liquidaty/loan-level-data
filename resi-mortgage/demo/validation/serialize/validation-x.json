@@ -1,0 +1,292 @@
+{
+  "condition": null,
+  "context": [
+    "Bankruptcy Case",
+    "All Borrower Total Income"
+  ],
+  "rules": [
+    {
+      "name": "Index: Index value not in list index_radco",
+      "condition": "not([:radco1:Index] = null or dict_contains(#index_radco,[:radco1:Index]))"
+    },
+    {
+      "name": "CurrentCoupon: is not a number",
+      "condition": "[:radco1:CurrentCoupon] != null and not(isnum([:radco1:CurrentCoupon]))"
+    },
+    {
+      "name": "CurrentCoupon: not in range (0.25 - 25)",
+      "condition": "not([:radco1:CurrentCoupon] = null or ([:radco1:CurrentCoupon] >= 0.25 and [:radco1:CurrentCoupon] <= 25))"
+    },
+    {
+      "name": "EverConstructionFlag: is not a boolean",
+      "condition": "[:radco1:EverConstructionFlag] != null and not(isbool([:radco1:EverConstructionFlag]))"
+    },
+    {
+      "name": "FirstForecastMonth: is blank",
+      "condition": "[:radco1:FirstForecastMonth] = null"
+    },
+    {
+      "name": "FirstForecastMonth: is not a number",
+      "condition": "[:radco1:FirstForecastMonth] != null and not(isnum([:radco1:FirstForecastMonth]))"
+    },
+    {
+      "name": "FirstForecastMonth: not in range (1 - 12)",
+      "condition": "not([:radco1:FirstForecastMonth] >= 1 and [:radco1:FirstForecastMonth] <= 12)"
+    },
+    {
+      "name": "GrossMargin: is not a number",
+      "condition": "[:radco1:GrossMargin] != null and not(isnum([:radco1:GrossMargin]))"
+    },
+    {
+      "name": "GrossMargin: not in range (0.05 - 25)",
+      "condition": "not([:radco1:GrossMargin] = null or ([:radco1:GrossMargin] >= 0.05 and [:radco1:GrossMargin] <= 25))"
+    },
+    {
+      "name": "Occupancy: Occupancy value not in list occ_radco",
+      "condition": "not([:radco1:Occupancy] = null or dict_contains(#occ_radco,[:radco1:Occupancy]))"
+    },
+    {
+      "name": "FirstForecastYear: is blank",
+      "condition": "[:radco1:FirstForecastYear] = null"
+    },
+    {
+      "name": "FirstForecastYear: is not a number",
+      "condition": "[:radco1:FirstForecastYear] != null and not(isnum([:radco1:FirstForecastYear]))"
+    },
+    {
+      "name": "FirstForecastYear: not in range (2000 - 2100)",
+      "condition": "not([:radco1:FirstForecastYear] >= 2000 and [:radco1:FirstForecastYear] <= 2100)"
+    },
+    {
+      "name": "State: is blank",
+      "condition": "[:radco1:State] = null"
+    },
+    {
+      "name": "State: State value not in list state_abbr",
+      "condition": "not(dict_contains(#state_abbr,[:radco1:State]))"
+    },
+    {
+      "name": "FirstResetCap: is not a number",
+      "condition": "[:radco1:FirstResetCap] != null and not(isnum([:radco1:FirstResetCap]))"
+    },
+    {
+      "name": "FirstResetCap: not in range (0.5 - 25)",
+      "condition": "not([:radco1:FirstResetCap] = null or ([:radco1:FirstResetCap] >= 0.5 and [:radco1:FirstResetCap] <= 25))"
+    },
+    {
+      "name": "CurrentTotalLTV: is not a number",
+      "condition": "[:radco1:CurrentTotalLTV] != null and not(isnum([:radco1:CurrentTotalLTV]))"
+    },
+    {
+      "name": "CurrentTotalLTV: not in range (1 - 500)",
+      "condition": "not([:radco1:CurrentTotalLTV] = null or ([:radco1:CurrentTotalLTV] >= 1 and [:radco1:CurrentTotalLTV] <= 500))"
+    },
+    {
+      "name": "InterestOnlyMonths: is not a number",
+      "condition": "[:radco1:InterestOnlyMonths] != null and not(isnum([:radco1:InterestOnlyMonths]))"
+    },
+    {
+      "name": "InterestOnlyMonths: not in range (0 - 600)",
+      "condition": "not([:radco1:InterestOnlyMonths] = null or ([:radco1:InterestOnlyMonths] >= 0 and [:radco1:InterestOnlyMonths] <= 600))"
+    },
+    {
+      "name": "FirstResetFloor: is not a number",
+      "condition": "[:radco1:FirstResetFloor] != null and not(isnum([:radco1:FirstResetFloor]))"
+    },
+    {
+      "name": "FirstResetFloor: not in range (0.5 - 25)",
+      "condition": "not([:radco1:FirstResetFloor] = null or ([:radco1:FirstResetFloor] >= 0.5 and [:radco1:FirstResetFloor] <= 25))"
+    },
+    {
+      "name": "MortgageInsuranceAmount: is not a number",
+      "condition": "[:radco1:MortgageInsuranceAmount] != null and not(isnum([:radco1:MortgageInsuranceAmount]))"
+    },
+    {
+      "name": "MortgageInsuranceAmount: not in range (0 - 50)",
+      "condition": "not([:radco1:MortgageInsuranceAmount] = null or ([:radco1:MortgageInsuranceAmount] >= 0 and [:radco1:MortgageInsuranceAmount] <= 50))"
+    },
+    {
+      "name": "OriginalLoanSize: is not a number",
+      "condition": "[:radco1:OriginalLoanSize] != null and not(isnum([:radco1:OriginalLoanSize]))"
+    },
+    {
+      "name": "OriginalLoanSize: not in range (100 - 5000000)",
+      "condition": "not([:radco1:OriginalLoanSize] = null or ([:radco1:OriginalLoanSize] >= 100 and [:radco1:OriginalLoanSize] <= 5000000))"
+    },
+    {
+      "name": "PoolID: is blank",
+      "condition": "[:radco1:PoolID] = null"
+    },
+    {
+      "name": "NumberOfUnits: is not a number",
+      "condition": "[:radco1:NumberOfUnits] != null and not(isnum([:radco1:NumberOfUnits]))"
+    },
+    {
+      "name": "BalloonMonths: is not a number",
+      "condition": "[:radco1:BalloonMonths] != null and not(isnum([:radco1:BalloonMonths]))"
+    },
+    {
+      "name": "BalloonMonths: not in range (1 - 600)",
+      "condition": "not([:radco1:BalloonMonths] = null or ([:radco1:BalloonMonths] >= 1 and [:radco1:BalloonMonths] <= 600))"
+    },
+    {
+      "name": "PeriodicCap: is not a number",
+      "condition": "[:radco1:PeriodicCap] != null and not(isnum([:radco1:PeriodicCap]))"
+    },
+    {
+      "name": "PeriodicCap: not in range (0.25 - 25)",
+      "condition": "not([:radco1:PeriodicCap] = null or ([:radco1:PeriodicCap] >= 0.25 and [:radco1:PeriodicCap] <= 25))"
+    },
+    {
+      "name": "PeriodicFloor: is not a number",
+      "condition": "[:radco1:PeriodicFloor] != null and not(isnum([:radco1:PeriodicFloor]))"
+    },
+    {
+      "name": "PeriodicFloor: not in range (0.25 - 25)",
+      "condition": "not([:radco1:PeriodicFloor] = null or ([:radco1:PeriodicFloor] >= 0.25 and [:radco1:PeriodicFloor] <= 25))"
+    },
+    {
+      "name": "CurrentLoanSize: is blank",
+      "condition": "[:radco1:CurrentLoanSize] = null"
+    },
+    {
+      "name": "CurrentLoanSize: is not a number",
+      "condition": "[:radco1:CurrentLoanSize] != null and not(isnum([:radco1:CurrentLoanSize]))"
+    },
+    {
+      "name": "CurrentLoanSize: not in range (100 - 5000000)",
+      "condition": "not([:radco1:CurrentLoanSize] >= 100 and [:radco1:CurrentLoanSize] <= 5000000)"
+    },
+    {
+      "name": "Age: is not a number",
+      "condition": "[:radco1:Age] != null and not(isnum([:radco1:Age]))"
+    },
+    {
+      "name": "Age: not in range (0 - 600)",
+      "condition": "not([:radco1:Age] = null or ([:radco1:Age] >= 0 and [:radco1:Age] <= 600))"
+    },
+    {
+      "name": "Documentation: Documentation value not in list doc_radco",
+      "condition": "not([:radco1:Documentation] = null or dict_contains(#doc_radco,[:radco1:Documentation]))"
+    },
+    {
+      "name": "LifeFloor: is not a number",
+      "condition": "[:radco1:LifeFloor] != null and not(isnum([:radco1:LifeFloor]))"
+    },
+    {
+      "name": "LifeFloor: not in range (0 - 25)",
+      "condition": "not([:radco1:LifeFloor] = null or ([:radco1:LifeFloor] >= 0 and [:radco1:LifeFloor] <= 25))"
+    },
+    {
+      "name": "RemainingTerm: is not a number",
+      "condition": "[:radco1:RemainingTerm] != null and not(isnum([:radco1:RemainingTerm]))"
+    },
+    {
+      "name": "RemainingTerm: not in range (1 - 600)",
+      "condition": "not([:radco1:RemainingTerm] = null or ([:radco1:RemainingTerm] >= 1 and [:radco1:RemainingTerm] <= 600))"
+    },
+    {
+      "name": "MonthsSinceLastDelinquency: is not a number",
+      "condition": "[:radco1:MonthsSinceLastDelinquency] != null and not(isnum([:radco1:MonthsSinceLastDelinquency]))"
+    },
+    {
+      "name": "OriginalCoupon: is not a number",
+      "condition": "[:radco1:OriginalCoupon] != null and not(isnum([:radco1:OriginalCoupon]))"
+    },
+    {
+      "name": "OriginalCoupon: not in range (0.25 - 25)",
+      "condition": "not([:radco1:OriginalCoupon] = null or ([:radco1:OriginalCoupon] >= 0.25 and [:radco1:OriginalCoupon] <= 25))"
+    },
+    {
+      "name": "LoanPurpose: LoanPurpose value not in list purp_radco",
+      "condition": "not([:radco1:LoanPurpose] = null or dict_contains(#purp_radco,[:radco1:LoanPurpose]))"
+    },
+    {
+      "name": "InitialPenaltyMonths: is not a number",
+      "condition": "[:radco1:InitialPenaltyMonths] != null and not(isnum([:radco1:InitialPenaltyMonths]))"
+    },
+    {
+      "name": "DelinquencyStatus: DelinquencyStatus value not in list dq_status_radco",
+      "condition": "not([:radco1:DelinquencyStatus] = null or dict_contains(#dq_status_radco,[:radco1:DelinquencyStatus]))"
+    },
+    {
+      "name": "PrepayPenaltyMonths: is not a number",
+      "condition": "[:radco1:PrepayPenaltyMonths] != null and not(isnum([:radco1:PrepayPenaltyMonths]))"
+    },
+    {
+      "name": "LifeCap: is not a number",
+      "condition": "[:radco1:LifeCap] != null and not(isnum([:radco1:LifeCap]))"
+    },
+    {
+      "name": "LifeCap: not in range (0.25 - 25)",
+      "condition": "not([:radco1:LifeCap] = null or ([:radco1:LifeCap] >= 0.25 and [:radco1:LifeCap] <= 25))"
+    },
+    {
+      "name": "LienPosition: is not a number",
+      "condition": "[:radco1:LienPosition] != null and not(isnum([:radco1:LienPosition]))"
+    },
+    {
+      "name": "LienPosition: not in range (1 - 8)",
+      "condition": "not([:radco1:LienPosition] = null or ([:radco1:LienPosition] >= 1 and [:radco1:LienPosition] <= 8))"
+    },
+    {
+      "name": "IsMultifamily: is not a boolean",
+      "condition": "[:radco1:IsMultifamily] != null and not(isbool([:radco1:IsMultifamily]))"
+    },
+    {
+      "name": "WacIsFixed: is not a boolean",
+      "condition": "[:radco1:WacIsFixed] != null and not(isbool([:radco1:WacIsFixed]))"
+    },
+    {
+      "name": "OriginalTotalLTV: is not a number",
+      "condition": "[:radco1:OriginalTotalLTV] != null and not(isnum([:radco1:OriginalTotalLTV]))"
+    },
+    {
+      "name": "OriginalTotalLTV: not in range (1 - 500)",
+      "condition": "not([:radco1:OriginalTotalLTV] = null or ([:radco1:OriginalTotalLTV] >= 1 and [:radco1:OriginalTotalLTV] <= 500))"
+    },
+    {
+      "name": "OriginalCreditScore: is not a number",
+      "condition": "[:radco1:OriginalCreditScore] != null and not(isnum([:radco1:OriginalCreditScore]))"
+    },
+    {
+      "name": "OriginalCreditScore: not in range (350 - 900)",
+      "condition": "not([:radco1:OriginalCreditScore] = null or ([:radco1:OriginalCreditScore] >= 350 and [:radco1:OriginalCreditScore] <= 900))"
+    },
+    {
+      "name": "CurrentLTV: is not a number",
+      "condition": "[:radco1:CurrentLTV] != null and not(isnum([:radco1:CurrentLTV]))"
+    },
+    {
+      "labels": [
+        "hoho"
+      ],
+      "name": "CurrentLTV: not in range (1 - 500)",
+      "condition": "not([:radco1:CurrentLTV] = null or ([:radco1:CurrentLTV] >= 1 and [:radco1:CurrentLTV] <= 500))"
+    },
+    {
+      "name": "PropertyType: PropertyType value not in list prop_radco",
+      "condition": "not([:radco1:PropertyType] = null or dict_contains(#prop_radco,[:radco1:PropertyType]))"
+    },
+    {
+      "name": "OriginalLTV: is not a number",
+      "condition": "[:radco1:OriginalLTV] != null and not(isnum([:radco1:OriginalLTV]))"
+    },
+    {
+      "name": "OriginalLTV: not in range (1 - 130)",
+      "condition": "not([:radco1:OriginalLTV] = null or ([:radco1:OriginalLTV] >= 1 and [:radco1:OriginalLTV] <= 130))"
+    },
+    {
+      "name": "OriginalTerm: is not a number",
+      "condition": "[:radco1:OriginalTerm] != null and not(isnum([:radco1:OriginalTerm]))"
+    },
+    {
+      "name": "OriginalTerm: not in range (1 - 600)",
+      "condition": "not([:radco1:OriginalTerm] = null or ([:radco1:OriginalTerm] >= 1 and [:radco1:OriginalTerm] <= 600))"
+    },
+    {
+      "name": "MonthsDelinquent: is not a number",
+      "condition": "[:radco1:MonthsDelinquent] != null and not(isnum([:radco1:MonthsDelinquent]))"
+    }
+  ]
+}
