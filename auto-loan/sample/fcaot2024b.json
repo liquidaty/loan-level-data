@@ -1,5 +1,8 @@
 {
   "name": "Ford Credit Auto Owner Trust 2024-B",
   "domain": "liquidaty8/auto-loan",
-  "prospectus": "https://www.sec.gov/Archives/edgar/data/2023756/000110465924073890/tm2416802d6_424b2.htm"
+  "prospectus": "https://www.sec.gov/Archives/edgar/data/2023756/000110465924073890/tm2416802d6_424b2.htm",
+  "url": "https://raw.githubusercontent.com/liquidaty/loan-level-data/master/auto-loan/sample/fcaot2024b.csv",
+  "fileName": "fcaot2024b.csv",
+  "source": "https://www.sec.gov/Archives/edgar/data/1129987/000112998724000012/autoloaninitial1161lp.xml"
 }
