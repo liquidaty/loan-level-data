@@ -1,0 +1,7 @@
+{
+  "name": "J.P. Morgan Mortgage Trust 2007-S2",
+  "url":"https://raw.githubusercontent.com/liquidaty/loan-level-data/master/resi-mortgage/sample/jpmmt07s2.csv",
+  "fileName": "jpmmt07s2.csv",
+  "prospectus": "https://www.sec.gov/Archives/edgar/data/1399246/000116231807000614/m0607424b5.htm",
+  "source": "https://www.sec.gov/Archives/edgar/data/1399246/000116231807000611/m0619fwp.htm"
+}
