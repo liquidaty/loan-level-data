@@ -1,0 +1,7 @@
+{
+  "name": "Lehman Mortgage Trust 2007-6",
+  "url": "https://raw.githubusercontent.com/liquidaty/loan-level-data/master/resi-mortgage/sample/lmt2007-6.csv.csv",
+  "fileName": "lmt2007-6.csv",
+  "prospectus": "https://www.sec.gov/Archives/edgar/data/1403260/000114420407035016/v079823_424b5.htm",
+  "source": "https://www.sec.gov/Archives/edgar/data/808851/000114420407034239/v079629_fwp.htm"
+}
