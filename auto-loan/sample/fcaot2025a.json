@@ -3,5 +3,6 @@
   "domain": "liquidaty8/auto-loan",
   "prospectus": "https://www.sec.gov/Archives/edgar/data/2057342/000110465925026212/tm258634d6_424b2.htm",
   "fileName": "fcaot2025a.csv",
+  "url": "https://raw.githubusercontent.com/liquidaty/loan-level-data/master/auto-loan/sample/fcaot2025a.csv",
   "source": "https://www.sec.gov/Archives/edgar/data/1129987/000112998725000004/autoloaninitial1183lp.xml"
 }
